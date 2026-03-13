@@ -7,16 +7,29 @@ GET http://localhost:3000
 GET http://localhost:3000/contacts/69ac8fcec0af682e7e5cc63e
 
 
-###
- 
 ### Create a new contact
-POST http://localhost:3000/api/contacts
+POST http://localhost:3000
 Content-Type: application/json
 
 {
-    "firstName": "John",
-    "lastName": "Doe",
-    "email": "john.doe@example.com",
-    "favoriteColor": "Blue",
-    "birthday": "1990-01-01"
+  "firstName": "John",
+  "lastName": "Doe",
+  "email": "john.doe@example.com",
+  "favoriteColor": "Red",
+  "birthday": "2001-07-12"
 }
+
+### Update an existing contact
+PUT http://localhost:3000/contacts/69ac8fcec0af682e7e5cc63e
+Content-Type: application/json  
+
+{
+  "firstName": "Jane",
+  "lastName": "Smith",
+  "email": "ookof2go.com",
+  "favoriteColor": "Blue",
+    "birthday": "1990-05-20"
+}
+
+### Delete a contact
+DELETE http://localhost:3000/contacts/69ac8fbec0af682e7e5cc63c
