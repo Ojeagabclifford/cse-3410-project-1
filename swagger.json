@@ -11,7 +11,7 @@
     "http"
   ],
   "paths": {
-    "/contacts/": {
+    "/": {
       "get": {
         "description": "",
         "responses": {
@@ -58,7 +58,7 @@
         }
       }
     },
-    "/contacts/contacts/{id}": {
+    "/contacts/{id}": {
       "get": {
         "description": "",
         "produces": [
