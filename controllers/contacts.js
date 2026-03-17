@@ -62,8 +62,8 @@ const updateContact = async (req, res) => {
     const contactId = new ObjectId(req.params.id);
     const updatedContact = {
       email: req.body.email,
-      Fname: req.body.firstName,
-      Lname: req.body.lastName,
+      Fname: req.body.Fname,
+      Lname: req.body.Lname,
       favoriteColor: req.body.favoriteColor,
       birthday: req.body.birthday
     };
