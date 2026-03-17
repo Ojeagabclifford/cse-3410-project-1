@@ -1,19 +1,19 @@
 const swaggerAutogen = require('swagger-autogen')();
 
-// 1. Create a "smart switch" variable
-const isProduction = process.env.NODE_ENV === 'production';
+// 1. Use Render's guaranteed built-in environment variable
+const isProduction = process.env.RENDER === 'true';
 
 const doc = {
     info: {
         title: 'Contacts API',
         description: 'API for managing contacts',
     },
-    // 2. Use the switch to choose the right URL and scheme!
+    // 2. The switch will now flawlessly detect when it is on Render
     host: isProduction ? 'cse-3410-project-1.onrender.com' : 'localhost:3000',
     schemes: isProduction ? ['https', 'http'] : ['http'],
 }; 
 
 const outputFile = './swagger.json';
-const endpointsFiles = ['./routes/index.js']; // Make sure this points to your actual routes file
+const endpointsFiles = ['./routes/index.js']; 
 
 swaggerAutogen(outputFile, endpointsFiles, doc);
